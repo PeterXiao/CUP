@@ -1,5 +1,10 @@
 # 0. Version Under Development
 
+## Versin 3.2.36
+* cup.res.mac 
+    - fix get disk info error
+    - fix import paramiko error
+
 ## Version 3.2.35
 
 * cup.services.generator

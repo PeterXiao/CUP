@@ -157,6 +157,7 @@ def get_disk_info():
             return all_diskinfo
         except:
             raise RuntimeError("couldn't find disk")
+    return _get_disk_info()
 
 
 

@@ -15,11 +15,6 @@ import warnings
 import traceback
 
 import cup
-try:
-    import paramiko
-    from paramiko import ssh_exception
-except ImportError:
-    assert False, 'Please install paramiko first'
 
 
 __all__ = [
@@ -38,6 +33,9 @@ def _connect(hostname, username, passwd, timeout, port=22):
     :return:
     """
     client = None
+    import paramiko
+    from paramiko import ssh_exception
+
     try:
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -62,6 +60,9 @@ def _sftp_connect(hostname, username, passwd, timeout, port=22):
     :param port:
     :return:
     """
+    import paramiko
+    from paramiko import ssh_exception
+
     client = None
     sftp = None
     try:
